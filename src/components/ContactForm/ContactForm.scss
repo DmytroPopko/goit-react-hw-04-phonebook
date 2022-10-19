@@ -1,0 +1,30 @@
+@import '../../styles/shared.scss';
+
+.ContactForm {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border: 1px solid $black;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.ContactForm__textarea {
+  display: flex;
+
+  $line-height: 1px;
+
+  height: $line-height;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  font: inherit;
+  line-height: $line-height;
+  letter-spacing: 0.01em;
+
+  resize: none;
+  margin: 12px;
+}
+
