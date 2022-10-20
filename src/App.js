@@ -48,9 +48,9 @@ const App = () => {
 
   const deleteContact = contactId => {
     console.log(contactId);
-    setContacts( () => [
+    setContacts( () => 
       contacts.filter(contact => contact.id !== contactId),
-    ]);
+    );
   };
 
   const changeFilter = e => {
@@ -60,11 +60,11 @@ const App = () => {
   const getVisibleConcats = () => {
     const normalizedFilter = filter.toLowerCase();
 
-    return contacts.filter(contact => {
-      console.log(contact);
-      return (
-      contact.name.toLowerCase().includes(normalizedFilter) )}
-    );
+    return normalizedFilter
+      ? contacts.filter(contact => {
+          return contact.name.includes(normalizedFilter);
+        })
+      : contacts;
   };
 
   const visibleContacts = getVisibleConcats();
